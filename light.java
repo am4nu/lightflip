@@ -82,7 +82,7 @@ public class light
     numofFlips=0;
     Scanner sc = new Scanner(System.in);
 int n = sc.nextInt();
-   init(n);//All lights were on
+   init(n);//All lights were on initially not a big to deal to do the other way
    printsq(); System.out.printf(" %d lights are ON initially\n",n); 
    lightoff(n);
    System.out.println(numofFlips);
