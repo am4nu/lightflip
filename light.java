@@ -7,8 +7,8 @@ public class light
 
   public static void init(int n)
   {
-     arr=new int[n+1];
-     for (int i=1;i<arr.length;i++)
+     arr=new int[n+1];     
+     for (int i=1;i<arr.length;i++)//turning on all the bulbs with 1's
      arr[i]=1;
 
   }
@@ -18,24 +18,23 @@ public class light
     for(int i=1;i<arr.length;i++)
     {
      
-    System.out.printf("%d ",arr[i]);
+    System.out.printf("%d ",arr[i]);//for printing arrays containing number 1's and 0's representing if light bulb is on or off.
     
     }
 
   }
   
-  public static void lightoff(int n)
+  public static void lightoff(int n) //recursive light off function.
   { 
    
-    if (n==1){
-      arr[n]=0;
+    if (n==1){//base case for lightoff function
+      arr[n]=0; 
       printsq();System.out.printf(" Turn OFF light %d\n",n);
-      numofFlips++;  
+      numofFlips++;  //counts number of flips
      
     }
    else
    {
-   
      if(n>=2){
        lightoff(n-2); 
        
@@ -78,14 +77,6 @@ public class light
  
    }
   }
-   
- 
-  
-  
-
-
-
-  
   public static void main(String[] args)
   {
     numofFlips=0;
